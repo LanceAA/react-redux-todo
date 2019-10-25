@@ -1,0 +1,110 @@
+html
+  height: 100%
+  body
+    height: 100%
+    display: flex
+    #root
+      height: 100vh
+      flex: 1
+      .container-fluid
+        height: 100vh
+        padding: 0
+        #directory
+          height: 6rem
+          background-color: rgba(68, 68, 68, 1)
+          #directory-text
+            padding: 1.25rem
+            color: white
+        #toolbar-container
+          padding: 1.25rem
+          background-color: rgba(211, 211, 211, 1)
+          margin: 0
+          i:hover
+            cursor: pointer
+          #checkmark
+            color: #09a609
+          #x
+            color: red
+        #notepad
+          height: 100%
+          background: repeating-linear-gradient(#fcf8c8, #fcf8c8 50px, blue 51px, blue 51px)
+          #notepad-list
+            padding: 0
+            height: 100%
+            border-left: 3px solid red
+            border-right: 3px solid rgb(214, 208, 184)
+          .note-input-container
+            height: 50px
+            margin-bottom: 1px
+            .ban-container-static
+              transform: translateY(0px)
+              opacity: 1
+              width: 100%
+              height: 50px
+              background-color: #ff7b7b
+              transition: opacity 1s, transform 0s 0s
+              cursor: pointer
+              .ban-btn
+                opacity: 1
+                position: absolute
+                top: .5rem
+                left: 50%
+                transition: opacity 1s
+                color: black
+            .ban-container
+              position: absolute
+              opacity: 0
+              left: 0
+              transform: translateY(-1000px)
+              transition: opacity 0.2s, transform 0s 1s
+              height: 50px
+              width: 100%
+              background-color: #ff7b7b
+              color: white
+              cursor: pointer
+              .ban-btn
+                opacity: 0
+                top: 0.5rem
+                left: 50%
+                position: absolute
+                transition: opacity 0.2s 1s
+            &:hover .ban-container
+              transform: translateY(0px)
+              opacity: 1
+              width: 100%
+              height: 50px
+              background-color: #ff7b7b
+              transition: opacity 1s, transform 0s 0s
+              .ban-btn
+                opacity: 1
+                position: absolute
+                top: .5rem
+                left: 50%
+                transition: opacity 1s
+            .note-input
+              transform: translateY(0px)
+              padding-left: 15px
+              padding-top: 24px
+              height: 50px
+              width: 100%
+              border: 0
+              background-color: #fcf8c8
+            .remove-on-hover
+              transform: translateY(0px)
+              transition: transform 0s 0.2s
+            &:hover .remove-on-hover
+              transform: translateY(-1000px)
+              transition: transform 0s 0s
+            .cursor-text
+              cursor: text
+            #add-entry
+              padding-top: 17px
+            .remove
+              transform: translateY(-1000px)
+              transition: transform 0s 0s
+              
+.default-cursor
+  cursor: default !important
+
+.pointer-cursor
+  cursor: pointer
